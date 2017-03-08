@@ -1,3 +1,11 @@
+var constraints = { audio: true }; 
+
+navigator.mediaDevices.getUserMedia(constraints)
+.then(function(mediaStream) {
+})
+.catch(function(err) { console.log(err.name + ": " + err.message); }); // always check for errors at the end.
+
+
 var connection = new RTCMultiConnection();
 connection.setDefaultEventsForMediaElement = false;
 
